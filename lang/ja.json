@@ -1,7 +1,23 @@
 {
-  "welcome": "こんにちは",
   "meta": {
-    "title": "Startale Labs",
-    "description": "Startale Labs is a company that makes web3 infrastructure and public goods."
+    "siteName":"Startale Labs",
+    "tagline": "Web3 for Billions",
+    "description": "Startale Labs is a company that makes web3 infrastructure and public goods.",
+    "products":{
+      "title":"プロダクト",
+      "description": "Technologies for an open, decentralised, & trust free society"
+    },
+    "solutions":{
+      "title":"ソリューションズ",
+      "description": "From Infrastructure to Applications. Startale Labs develops web3 core infrastructure and decentralised applications."
+    },
+    "about":{
+      "title":"私たちについて",
+      "description": "Startale Labs is creating the missing piece for the web3's mass adoption."
+    },
+    "blog":{
+      "title":"ブログ",
+      "description": "Startale Labs is creating the missing piece for the web3's mass adoption."
+    }
   }
 }

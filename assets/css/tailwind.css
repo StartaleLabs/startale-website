@@ -1,5 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Spectral:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Spectral:wght@200;300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  a {
+    @apply cursor-pointer text-black hover:text-gray-500 hover:underline;
+  }
+  a img{
+    @apply hover:opacity-90;
+  }
+  h1,
+  h2 {
+    @apply text-black font-serif tracking-tight !leading-tight;
+  }
+}
