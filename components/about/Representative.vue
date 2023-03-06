@@ -47,14 +47,14 @@ const representative = [
     class: "lg:-ml-24 lg:mr-24",
   },
   {
-    image: "",
+    image: "shun.webp",
     name: t("about.representative.shun.name"),
     title: "COO",
     description: t("about.representative.shun.description"),
     class: "lg:-mr-24 lg:ml-24",
   },
   {
-    image: "",
+    image: "hoon.webp",
     name: t("about.representative.hoon.name"),
     title: "CTO",
     description: t("about.representative.hoon.description"),
