@@ -8,7 +8,7 @@
     <SolutionsIntroduction />
     <SolutionsFeatures />
     <SolutionsWeb3 />
-    <SolutionsLogos />
+    <!-- <SolutionsLogos /> -->
   </div>
 </template>
 

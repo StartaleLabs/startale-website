@@ -1,5 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false, // for GitHub Pages
+  app: {
+    baseURL: '/startale-website/' // for GitHub Pages
+  },
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n"],
   i18n: {
     baseUrl: "https://startale.org",
