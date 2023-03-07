@@ -14,7 +14,7 @@
           :src="useAsset('logos/' + item.logo)"
           :alt="item.name"
         />
-        <p class="text-xl">{{ item.description }}</p>
+        <p class="text-xl mt-4">{{ item.description }}</p>
       </li>
     </ul>
     <div class="text-center">

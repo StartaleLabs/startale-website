@@ -40,13 +40,6 @@ const representative = [
     class: "",
   },
   {
-    image: "",
-    name: t("about.representative.obi.name"),
-    title: "Chief Investment Officer",
-    description: t("about.representative.obi.description"),
-    class: "lg:-ml-24 lg:mr-24",
-  },
-  {
     image: "shun.webp",
     name: t("about.representative.shun.name"),
     title: "COO",

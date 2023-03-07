@@ -6,7 +6,7 @@
       :class="item.class"
     >
       <component :is="item.icon" class="h-20 w-20 text-black" />
-      <h2 class="text-3xl font-medium my-2">
+      <h2 class="text-3xl font-medium mt-4 mb-2">
         {{ item.title }}
       </h2>
       <p class="lg:pb-6">{{ item.description }}</p>

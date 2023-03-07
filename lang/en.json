@@ -2,22 +2,22 @@
   "meta": {
     "siteName":"Startale Labs",
     "tagline": "Web3 for Billions",
-    "description": "Startale Labs is a company that makes web3 infrastructure and public goods.",
+    "description": "Startale Labs is a company that makes web3 infrastructure and public goods",
     "products": {
       "title": "Products",
       "description": "Technologies for an open, decentralised, & trust free society"
     },
     "solutions": {
       "title": "Solutions",
-      "description": "From Infrastructure to Applications. Startale Labs develops web3 core infrastructure and decentralised applications."
+      "description": "Startale Labs develops web3 core infrastructure and decentralised applications"
     },
     "about": {
       "title": "About Us",
-      "description": "Startale Labs is creating the missing piece for the web3's mass adoption."
+      "description": "Startale Labs is creating the missing piece for the web3's mass adoption"
     },
     "blog":{
       "title":"Blog",
-      "description": "Startale Labs is creating the missing piece for the web3's mass adoption."
+      "description": ""
     }
   },
   "home": {
@@ -37,7 +37,7 @@
     },
     "products": {
       "title":"Technologies for an open, decentralised, & trust free society",
-      "astar": "Multi-chain decentralized application layer on Polkadot",
+      "astar": "The future of smart contracts platform for multichain",
       "swanky": "All-in-one tool for WASM smart contract developers",
       "button": "Learn more about our products"
     },
@@ -80,10 +80,6 @@
       "sota":{
         "name":"Sota Watanabe",
         "description":"Sota Watanabe is the founder of Astar Network, Next Web Capital and CEO at Startale Labs. He is selected Forbes30 Under 30 both in Japan and Asia in 2022. Apart from that, Sota is one of the directors of Japan Blockchain Association."
-      },
-      "obi":{
-        "name":"Yusuke Obinata (Obi)",
-        "description":"Obi has worked through the launch of Polkadot and Kusama and its ecosystem growth at Web3 Foundation. Previously, he co-founded Ethereum Japan and led some of the earliest Web3/Blockchain developer movements in Asia."
       },
       "shun":{
         "name":"Shun Ishikawa",

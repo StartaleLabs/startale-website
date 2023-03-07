@@ -1,5 +1,10 @@
 <template>
-  <div class="bg-white text-gray-500 font-sans font-light text-lg">
+  <div
+    class="bg-white text-lg font-light"
+    :class="
+      locale === 'ja' ? 'font-jp text-gray-600' : 'font-sans text-gray-500'
+    "
+  >
     <Header />
     <slot />
     <Footer />
@@ -8,7 +13,7 @@
 
 <script setup lang="ts">
 const route = useRoute();
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const meta = {
   url: "https://startale.org",

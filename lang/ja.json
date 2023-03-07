@@ -2,22 +2,93 @@
   "meta": {
     "siteName":"Startale Labs",
     "tagline": "Web3 for Billions",
-    "description": "Startale Labs is a company that makes web3 infrastructure and public goods.",
-    "products":{
-      "title":"プロダクト",
-      "description": "Technologies for an open, decentralised, & trust free society"
+    "description": "Startale Labs is a company that makes web3 infrastructure and public goods",
+    "products": {
+      "title": "プロダクト",
+      "description": "オープン・分散化・信頼性のある社会のためのテクノロジー"
     },
-    "solutions":{
-      "title":"ソリューションズ",
-      "description": "From Infrastructure to Applications. Startale Labs develops web3 core infrastructure and decentralised applications."
+    "solutions": {
+      "title": "ソリューション",
+      "description": "Web3のコアインフラストラクチャと分散型アプリケーション開発"
     },
-    "about":{
-      "title":"私たちについて",
-      "description": "Startale Labs is creating the missing piece for the web3's mass adoption."
+    "about": {
+      "title": "私たちについて",
+      "description": "Web3のマスアダプションに不可欠なモノを生み出す"
     },
     "blog":{
       "title":"ブログ",
-      "description": "Startale Labs is creating the missing piece for the web3's mass adoption."
+      "description": ""
+    }
+  },
+  "home": {
+    "features": {
+      "dapps": {
+        "title": "dApps・インフラ開発",
+        "description": "Web3のためのコアとなるインフラやアプリケーションを開発します。詳細はプロダクトページをご確認ください。"
+      },
+      "rd": {
+        "title": "R&D（研究開発）",
+        "description": "Web3関連技術やトークンエコノミクスを含む最新の技術の研究開発および実装を行っています。"
+      },
+      "incubation": {
+        "title": "インキュベーション",
+        "description": "イノベーションを加速させるWeb3スタートアップを育成するためのインキュベーションプログラムを提供しています。また、エコシステムを構築し、Startale Labsとのシナジーの強化を目指しています。"
+      }
+    },
+    "products": {
+      "title":"オープン・分散化・信頼性のある社会のためのテクノロジー",
+      "astar": "マルチチェーン時代のスマートコントラクトハブとなるdAppsのプラットフォーム",
+      "swanky": "WASMスマートコントラクト開発者のためのオールインワンツール",
+      "button": "プロダクトをもっと見る"
+    },
+    "blog": {
+      "button": "ブログをもっと見る"
+    },
+    "coa": {
+      "title": "How can Startale Labs help your project?",
+      "button": "プロダクトを見る"
+    }
+  },
+  "products":{
+    "astar":"Astar Networkは、EVMおよびWASMスマートコントラクトによるdAppsの構築をサポートし、クロスコンセンサスメッセージング（XCM）による真の相互運用性を開発者に提供します。Astar独自のBuild2Earnモデルは、開発者が自分のコードと構築したdAppに対して、dAppステーキングメカニズムを通じて報酬を得ることを可能にします。",
+    "swanky":"Swanky Suiteは、WebAssemblyスマートコントラクト開発者が次世代のdAppsを開発するための\"オールインワン\"ツールを目指しています。"
+  },
+  "solutions":{
+    "introduction":{
+      "title":"先進的なアーキテクチャ・\n開発ツール・サポート",
+      "description":"Startale Labsと共に開発を行うことで、世界中の優れた開発者、暗号技術者、リサーチャー、ソリューションアーキテクトのグローバルチームを活用する機会があります。彼らはあなたを正しい決断へと導き、プロジェクトを軌道に乗せるための支援を行います。また、次世代のSubstrateフレームワークにより、ブロックチェーン技術を素早く簡単に展開し、生産要件に最適化するためのツールを開発者に提供します。"
+    },
+    "features":{
+      "collaborate":{
+        "title":"共同研究",
+        "description":"企業と協力し、Web3のコア機能を実装および開発するための取り組みを行っています。"
+      },
+      "advise":{
+        "title":"アドバイザリー",
+        "description":"先端的な知識により、最適な企業の意思決定を支援しています。"
+      },
+      "dev":{
+        "title":"コアWeb3開発",
+        "description":"レイヤー1のブロックチェーン開発からアプリケーション作成まで包括的なサポートを提供しています。"
+      }
+    },
+    "web3":"Startale Labsは、次世代ブロックチェーン技術を使用して、分散型アプリケーションを強化します。セキュリティ、スケーラビリティ、ガバナンス、相互運用性を念頭に置いて設計されたインフラストラクチャ上に構築されたStartale Labsのソリューションにより、あなたのプロジェクトを戦略的に成長し、テクノロジーの進化や市場の要求の急速な変化に適応することができます。独立したコンソーシアムブロックチェーンを構築するか、Astar Networkと統合するかにかかわらず、経験豊富なチームがあなたの要件に基づいてカスタムソリューションを設計・提供します。"
+  },
+  "about":{
+    "startale":"Startale Labsは、Astar Foundation、Web3 Foundation、その他のプロジェクトや大企業との協力のもと、マルチチェーンのアプリケーションやインフラを開発するWeb3テック企業です。また、Astar Networkでの経験と繋がりを活かした研究開発やインキュベーションも行っています。",
+    "representative":{
+      "sota":{
+        "name":"Sota Watanabe",
+        "description":"Astar Network、Next Web Capitalのファウンダーであり、Startale LabsのCEO。2022年に日本とアジアのForbes30 Under 30に選出。さらに日本ブロックチェーン協会の役員の一人でもある。"
+      },
+      "shun":{
+        "name":"Shun Ishikawa",
+        "description":"Astar Networkのコア開発チームであるStake TechnologiesのCOO。2019年にはイーサリアムdAppsの中で世界最高のDAU/売上/取引量を記録したNFTゲーム「My Crypto Heroes」のプロデューサーを務めた。"
+      },
+      "hoon":{
+        "name":"Hoon Kim",
+        "description":"Astar FoundationのCTO。16歳で韓国の国立情報学オリンピックで金メダル獲得。また、大学在学中に企業の資産管理に相互運用可能なブロックチェーンを利用することをテーマにした学部論文で最優秀論文賞を受賞。"
+      }
     }
   }
 }

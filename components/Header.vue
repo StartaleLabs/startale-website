@@ -6,7 +6,7 @@
       class="mx-auto flex max-w-7xl items-center justify-between px-3 w-full"
       aria-label="Global"
     >
-      <NuxtLink to="/">
+      <NuxtLink :to="localePath('/')">
         <span class="sr-only">{{ $t("meta.siteName") }}</span>
         <img
           class="h-12 lg:h-20"
@@ -24,14 +24,27 @@
           <Bars3Icon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-      <div class="hidden lg:flex lg:gap-x-12 leading-tight font-normal">
+      <div class="hidden lg:flex lg:gap-x-10 leading-tight font-normal">
         <NuxtLink
-          v-for="item in navigation"
-          :key="item.name"
-          :to="localePath(item.href)"
-          class="text-xl"
+          :to="localePath('/products')"
+          :class="locale !== 'ja' ? 'text-xl' : 'text-base'"
+          @click="mobileMenuOpen = false"
         >
-          {{ item.name }}
+          {{ $t("meta.products.title") }}
+        </NuxtLink>
+        <NuxtLink
+          :to="localePath('/solutions')"
+          :class="locale !== 'ja' ? 'text-xl' : 'text-base'"
+          @click="mobileMenuOpen = false"
+        >
+          {{ $t("meta.solutions.title") }}
+        </NuxtLink>
+        <NuxtLink
+          :to="localePath('/about')"
+          :class="locale !== 'ja' ? 'text-xl' : 'text-base'"
+          @click="mobileMenuOpen = false"
+        >
+          {{ $t("meta.about.title") }}
         </NuxtLink>
         <NuxtLink
           v-for="locale in availableLocales"
@@ -68,13 +81,25 @@
         <div class="font-serif text-center text-2xl space-y-2">
           <div>
             <NuxtLink
-              v-for="item in navigation"
-              :key="item.name"
-              :to="localePath(item.href)"
+              :to="localePath('/products')"
               class="block py-6"
               @click="mobileMenuOpen = false"
             >
-              {{ item.name }}
+              {{ $t("meta.products.title") }}
+            </NuxtLink>
+            <NuxtLink
+              :to="localePath('/solutions')"
+              class="block py-6"
+              @click="mobileMenuOpen = false"
+            >
+              {{ $t("meta.solutions.title") }}
+            </NuxtLink>
+            <NuxtLink
+              :to="localePath('/about')"
+              class="block py-6"
+              @click="mobileMenuOpen = false"
+            >
+              {{ $t("meta.about.title") }}
             </NuxtLink>
             <NuxtLink
               v-for="locale in availableLocales"
@@ -101,7 +126,7 @@ import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon, GlobeAltIcon } from "@heroicons/vue/24/outline";
 
 const route = useRoute();
-const { locale, locales } = useI18n();
+const { locale, locales, t } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 
 type Locale = {
@@ -115,13 +140,6 @@ const availableLocales = computed(() => {
   return locales.value.filter((i: Locale) => i.code !== locale.value);
 });
 const localePath = useLocalePath();
-
-const navigation = [
-  { name: "Products", href: "/products" },
-  { name: "Solutions", href: "/solutions" },
-  { name: "Blog", href: "/blog" },
-  { name: "About", href: "/about" },
-];
 
 const mobileMenuOpen = ref(false);
 </script>

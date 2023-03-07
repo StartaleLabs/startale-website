@@ -1,8 +1,15 @@
 <template>
-  <hero
-    page="Products"
-    title="Technologies for an open, decentralised, & trust free society"
-  />
+  <div class="py-28 flex items-center justify-center h-[80vh] px-3">
+    <div class="text-center max-w-5xl">
+      <p class="text-black lg:text-2xl mb-1 font-serif">
+        {{ $t("meta.products.title") }}
+      </p>
+      <h1 class="text-4xl lg:text-6xl font-semibold !leading-[1.2] font-serif">
+        Technologies for an open, decentralised, & trust free society
+      </h1>
+      <!-- <p class="lg:text-xl mt-4"></p> -->
+    </div>
+  </div>
   <div class="max-w-6xl mx-auto px-3 space-y-12 lg:space-y-40">
     <div v-for="item in products" class="lg:flex lg:space-x-12">
       <div class="shrink-0 mb-6 lg:mb-6">

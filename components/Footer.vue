@@ -53,10 +53,10 @@ const navigation = [
         label: "About",
         href: "/about",
       },
-      {
-        label: "Blog",
-        href: "/blog",
-      },
+      // {
+      //   label: "Blog",
+      //   href: "/blog",
+      // },
       {
         label: "Jobs",
         href: "",
