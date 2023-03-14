@@ -1,6 +1,12 @@
 <template>
   <div class="absolute -top-10 left-1/2 z-0 -translate-x-1/2">
-    <img id="logo" ref="logoImg" class="next-particle hidden" src="logo.png" />
+    <img
+      ref="logoImg"
+      id="logo"
+      class="next-particle hidden"
+      src="~/assets/images/home/logo.png"
+      alt=""
+    />
   </div>
 </template>
 
