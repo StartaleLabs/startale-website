@@ -1,5 +1,7 @@
 <template>
-  <ul class="max-w-7xl mx-auto px-3 lg:flex lg:-space-x-4 items-start">
+  <ul
+    class="max-w-7xl mx-auto px-3 lg:flex lg:-space-x-4 items-start justify-center"
+  >
     <li
       v-for="item in features"
       class="lg:w-1/3 border border-gray-500 px-6 py-8 lg:p-10 bg-white"

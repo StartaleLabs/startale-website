@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-black py-16 lg:py-20 mt-40">
+  <footer class="bg-black py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-3">
       <nav class="lg:flex">
         <div class="flex-1">
@@ -8,7 +8,21 @@
               <p class="uppercase text-gray-400 mb-3">{{ item.category }} :</p>
               <ul class="space-y-2">
                 <li v-for="menu in item.menu">
-                  <NuxtLink :to="menu.href">{{ menu.label }}</NuxtLink>
+                  <NuxtLink
+                    :to="
+                      menu.href.includes('https')
+                        ? menu.href
+                        : localePath(menu.href)
+                    "
+                    :target="menu.href.includes('https') ? '_blank' : '_self'"
+                    class="inline-flex items-center"
+                  >
+                    {{ menu.label }}
+                    <ArrowTopRightOnSquareIcon
+                      class="w-4 h-4 ml-1"
+                      v-if="menu.href.includes('https')"
+                    />
+                  </NuxtLink>
                 </li>
               </ul>
             </li>
@@ -23,9 +37,9 @@
             </NuxtLink>
           </div>
         </div>
-        <ul class="flex justify-center space-x-2 mt-12 lg:mt-0">
+        <ul class="flex justify-center space-x-4 mt-12 lg:mt-0">
           <li v-for="item in social">
-            <NuxtLink :to="item.href" class="p-2 block">
+            <NuxtLink :to="item.href" target="_blank" class="p-2 block">
               <component :is="item.icon" class="h-6 w-6" />
               <span class="sr-only">{{ item.label }}</span>
             </NuxtLink>
@@ -40,10 +54,14 @@
 </template>
 
 <script setup lang="ts">
+import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+
 const Twitter = resolveComponent("IconTwitter");
 const Discord = resolveComponent("IconDiscord");
 const Telegram = resolveComponent("IconTelegram");
 const Github = resolveComponent("IconGithub");
+
+const localePath = useLocalePath();
 
 const navigation = [
   {
@@ -59,7 +77,7 @@ const navigation = [
       // },
       {
         label: "Jobs",
-        href: "",
+        href: "https://angel.co/company/astar-network",
       },
       {
         label: "Privacy Policy",
@@ -85,15 +103,15 @@ const navigation = [
     menu: [
       {
         label: "For Startup Teams",
-        href: "",
+        href: "/solutions",
       },
       {
         label: "For Organizations",
-        href: "",
+        href: "/solutions",
       },
       {
         label: "All Solutions",
-        href: "",
+        href: "/solutions",
       },
     ],
   },
@@ -102,24 +120,24 @@ const navigation = [
 const social = [
   {
     label: "Twitter",
-    href: "",
+    href: "https://twitter.com/startalehq",
     icon: Twitter,
   },
-  {
-    label: "GitHub",
-    href: "",
-    icon: Github,
-  },
-  {
-    label: "Telegram",
-    href: "",
-    icon: Telegram,
-  },
-  {
-    label: "Discord",
-    href: "",
-    icon: Discord,
-  },
+  // {
+  //   label: "GitHub",
+  //   href: "",
+  //   icon: Github,
+  // },
+  // {
+  //   label: "Telegram",
+  //   href: "",
+  //   icon: Telegram,
+  // },
+  // {
+  //   label: "Discord",
+  //   href: "",
+  //   icon: Discord,
+  // },
 ];
 </script>
 

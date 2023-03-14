@@ -8,7 +8,8 @@
     <HomeFeatures />
     <HomeProducts />
     <HomeLogos />
-    <HomeBlog />
+    <!-- <HomeBlog /> -->
+    <HomeCallToAction />
   </div>
 </template>
 
