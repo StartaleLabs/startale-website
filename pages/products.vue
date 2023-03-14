@@ -17,7 +17,8 @@
       <!-- <p class="lg:text-xl mt-4"></p> -->
     </div>
   </div>
-  <div class="max-w-6xl mx-auto px-3 space-y-12 lg:space-y-40">
+
+  <div class="max-w-6xl mx-auto px-3 space-y-12 lg:space-y-40 pb-40">
     <div v-for="item in products" class="lg:flex lg:space-x-12">
       <div class="shrink-0 mb-6 lg:mb-6">
         <img

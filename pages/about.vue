@@ -19,7 +19,8 @@
       </p>
     </div>
   </div>
-  <div class="space-y-28 lg:space-y-40">
+
+  <div class="space-y-28 lg:space-y-40 pb-40">
     <AboutStartale />
     <AboutRepresentative />
   </div>

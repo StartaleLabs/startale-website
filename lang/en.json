@@ -44,9 +44,8 @@
     "blog": {
       "button": "See all blog posts"
     },
-    "coa": {
-      "title": "How can Startale Labs help your project?",
-      "button": "See our products"
+    "cta": {
+      "button": "See our solutions"
     }
   },
   "products":{

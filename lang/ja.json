@@ -44,9 +44,8 @@
     "blog": {
       "button": "ブログをもっと見る"
     },
-    "coa": {
-      "title": "How can Startale Labs help your project?",
-      "button": "プロダクトを見る"
+    "cta": {
+      "button": "ソリューションを見る"
     }
   },
   "products":{
