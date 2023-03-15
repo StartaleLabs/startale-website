@@ -37,7 +37,7 @@ const representative = [
     name: t("about.representative.sota.name"),
     title: "CEO",
     description: t("about.representative.sota.description"),
-    class: "",
+    class: "lg:-mr-24 lg:ml-24",
   },
   {
     image: "shun.webp",
@@ -45,13 +45,6 @@ const representative = [
     title: "COO",
     description: t("about.representative.shun.description"),
     class: "lg:mr-24 lg:-ml-24",
-  },
-  {
-    image: "hoon.webp",
-    name: t("about.representative.hoon.name"),
-    title: "CTO",
-    description: t("about.representative.hoon.description"),
-    class: "lg:-mr-24 lg:ml-24",
   },
 ];
 </script>
