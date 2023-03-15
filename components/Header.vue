@@ -76,7 +76,7 @@
     >
       <div class="fixed inset-0 z-10" />
       <DialogPanel
-        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-3 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 flex items-center justify-center"
+        class="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-white px-3 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 flex items-center justify-center"
       >
         <button
           type="button"
