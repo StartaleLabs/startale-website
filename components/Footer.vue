@@ -10,7 +10,8 @@
                 <li v-for="menu in item.menu">
                   <NuxtLink
                     :to="
-                      menu.href.includes('https')
+                      menu.href.includes('https') ||
+                      menu.href.includes('mailto')
                         ? menu.href
                         : localePath(menu.href)
                     "
@@ -27,15 +28,6 @@
               </ul>
             </li>
           </ul>
-          <div>
-            <p class="uppercase text-gray-400">EMAIL COPY TO CLIPBOARD :</p>
-            <NuxtLink
-              to="mailto:info@startale.org"
-              class="text-3xl md:text-6xl lg:text-8xl font-serif border-b border-white leading-tight inline-block hover:no-underline"
-            >
-              info@startale.org
-            </NuxtLink>
-          </div>
         </div>
         <ul class="flex justify-center space-x-4 mt-12 lg:mt-0">
           <li v-for="item in social">
@@ -82,6 +74,10 @@ const navigation = [
       {
         label: "Privacy Policy",
         href: "https://docs.google.com/document/d/1XSEQ7pPtAt9qnIVLThwWytdoOqV0aNQh/edit?usp=sharing&ouid=106208569002643720949&rtpof=true&sd=true",
+      },
+      {
+        label: "Get in touch",
+        href: "mailto:info@startale.org",
       },
     ],
   },
