@@ -2,8 +2,11 @@
 export default defineNuxtConfig({
   app: {
     // baseURL: "/startale-website/", // for GitHub Pages
+    head: {
+      script: [{ src: "./nextparticle.js" }],
+    },
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n"],
+  modules: ["@nuxtjs/tailwindcss", "~/modules/sitemap", "@nuxtjs/i18n"],
   i18n: {
     baseUrl: "https://startale.org",
     locales: [
@@ -28,5 +31,8 @@ export default defineNuxtConfig({
       locale: "en",
       fallbackLocale: "en",
     },
+  },
+  sitemap: {
+    hostname: "https://startale.org",
   },
 });

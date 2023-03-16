@@ -1,10 +1,5 @@
 <template>
-  <div
-    class="bg-white text-lg font-light"
-    :class="
-      locale === 'ja' ? 'font-jp text-gray-600' : 'font-sans text-gray-500'
-    "
-  >
+  <div class="bg-white text-lg text-gray-500 font-sans">
     <Header />
     <slot />
     <Footer />

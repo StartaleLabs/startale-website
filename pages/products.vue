@@ -1,6 +1,13 @@
 <template>
-  <div class="py-28 flex items-center justify-center h-[80vh] px-3">
-    <div class="text-center max-w-5xl">
+  <div
+    class="py-28 flex items-center justify-center h-[80vh] relative overflow-hidden"
+  >
+    <img
+      class="w-full h-auto absolute bottom-0 left-0 z-0 min-w-[1000px]"
+      src="~/assets/images/home/particle-wave.svg"
+      alt=""
+    />
+    <div class="text-center max-w-5xl pb-6 lg:pb-12 px-3">
       <p class="text-black lg:text-2xl mb-1 font-serif">
         {{ $t("meta.products.title") }}
       </p>
@@ -10,7 +17,8 @@
       <!-- <p class="lg:text-xl mt-4"></p> -->
     </div>
   </div>
-  <div class="max-w-6xl mx-auto px-3 space-y-12 lg:space-y-40">
+
+  <div class="max-w-6xl mx-auto px-3 space-y-12 lg:space-y-40 pb-40">
     <div v-for="item in products" class="lg:flex lg:space-x-12">
       <div class="shrink-0 mb-6 lg:mb-6">
         <img

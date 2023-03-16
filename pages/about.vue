@@ -1,6 +1,13 @@
 <template>
-  <div class="py-28 flex items-center justify-center h-[80vh] px-3">
-    <div class="text-center max-w-5xl">
+  <div
+    class="py-28 flex items-center justify-center h-[80vh] relative overflow-hidden"
+  >
+    <img
+      class="w-full h-auto absolute bottom-0 left-0 z-0 min-w-[1000px]"
+      src="~/assets/images/home/particle-wave.svg"
+      alt=""
+    />
+    <div class="text-center max-w-5xl pb-6 lg:pb-12 px-3">
       <p class="text-black lg:text-2xl mb-1 font-serif">
         {{ $t("meta.about.title") }}
       </p>
@@ -12,7 +19,8 @@
       </p>
     </div>
   </div>
-  <div class="space-y-28 lg:space-y-40">
+
+  <div class="space-y-28 lg:space-y-40 pb-40">
     <AboutStartale />
     <AboutRepresentative />
   </div>

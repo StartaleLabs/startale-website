@@ -27,21 +27,30 @@
       <div class="hidden lg:flex lg:gap-x-10 leading-tight font-normal">
         <NuxtLink
           :to="localePath('/products')"
-          :class="locale !== 'ja' ? 'text-xl' : 'text-base'"
+          class="border-b-2 py-2"
+          :class="`${locale !== 'ja' ? 'text-xl' : 'text-base'} ${
+            route.href === '/products' ? 'border-black' : 'border-transparent'
+          }`"
           @click="mobileMenuOpen = false"
         >
           {{ $t("meta.products.title") }}
         </NuxtLink>
         <NuxtLink
           :to="localePath('/solutions')"
-          :class="locale !== 'ja' ? 'text-xl' : 'text-base'"
+          class="border-b-2 py-2"
+          :class="`${locale !== 'ja' ? 'text-xl' : 'text-base'} ${
+            route.href === '/solutions' ? 'border-black' : 'border-transparent'
+          }`"
           @click="mobileMenuOpen = false"
         >
           {{ $t("meta.solutions.title") }}
         </NuxtLink>
         <NuxtLink
           :to="localePath('/about')"
-          :class="locale !== 'ja' ? 'text-xl' : 'text-base'"
+          class="border-b-2 py-2"
+          :class="`${locale !== 'ja' ? 'text-xl' : 'text-base'} ${
+            route.href === '/about' ? 'border-black' : 'border-transparent'
+          }`"
           @click="mobileMenuOpen = false"
         >
           {{ $t("meta.about.title") }}
@@ -67,7 +76,7 @@
     >
       <div class="fixed inset-0 z-10" />
       <DialogPanel
-        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-3 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 flex items-center justify-center"
+        class="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-white px-3 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 flex items-center justify-center"
       >
         <button
           type="button"
@@ -126,7 +135,7 @@ import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon, GlobeAltIcon } from "@heroicons/vue/24/outline";
 
 const route = useRoute();
-const { locale, locales, t } = useI18n();
+const { locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 
 type Locale = {
