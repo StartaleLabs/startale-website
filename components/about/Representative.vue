@@ -1,13 +1,12 @@
 <template>
-  <div class="max-w-7xl mx-auto px-3">
+  <div class="max-w-6xl mx-auto px-3">
     <h2 class="text-center text-5xl lg:text-6xl font-medium mb-10 lg:mb-16">
       Representative
     </h2>
-    <ul class="flex flex-col space-y-6 lg:space-y-12 lg:px-24">
+    <ul class="flex flex-col space-y-6 lg:space-y-12">
       <li
         v-for="item in representative"
         class="md:flex items-center border border-gray-500 py-8 px-6 lg:p-12 md:space-x-8 lg:space-x-12"
-        :class="item.class"
       >
         <div v-if="item.image !== ''" class="mb-6 lg:mb-0 shrink-0">
           <img
@@ -37,14 +36,6 @@ const representative = [
     name: t("about.representative.sota.name"),
     title: "CEO",
     description: t("about.representative.sota.description"),
-    class: "lg:-mr-24 lg:ml-24",
-  },
-  {
-    image: "shun.webp",
-    name: t("about.representative.shun.name"),
-    title: "COO",
-    description: t("about.representative.shun.description"),
-    class: "lg:mr-24 lg:-ml-24",
   },
 ];
 </script>
