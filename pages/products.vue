@@ -145,7 +145,7 @@ const products = [
       {
         icon: DocumentTextIcon,
         name: "Docs",
-        href: "https://docs.astar.network/docs/build/wasm/swanky/",
+        href: "https://docs.astar.network/docs/build/wasm/swanky-suite/",
       },
       {
         icon: Github,

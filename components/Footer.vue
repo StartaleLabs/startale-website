@@ -76,8 +76,8 @@ const navigation = [
         href: "https://docs.google.com/document/d/1XSEQ7pPtAt9qnIVLThwWytdoOqV0aNQh/edit?usp=sharing&ouid=106208569002643720949&rtpof=true&sd=true",
       },
       {
-        label: "Get in touch",
-        href: "mailto:info@startale.org",
+        label: "Contact us",
+        href: "https://zohb4s71q4n.typeform.com/to/mxHjoQB6",
       },
     ],
   },
