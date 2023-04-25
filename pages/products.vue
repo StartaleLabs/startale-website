@@ -33,7 +33,9 @@
         >
           {{ item.name }}
         </h2>
-        <p class="text-xl leading-loose mb-8">{{ item.description }}</p>
+        <p class="text-xl leading-loose mb-8 whitespace-pre-wrap">
+          {{ item.description }}
+        </p>
         <nav class="flex flex-wrap mb-12">
           <NuxtLink
             v-for="link in item.links"
