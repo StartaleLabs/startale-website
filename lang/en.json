@@ -37,7 +37,7 @@
     },
     "products": {
       "title":"Technologies for an open, decentralised, & trust free society",
-      "astar": "The future of smart contracts platform for multichain",
+      "astar": "The Future of Multichain Smart Contracts",
       "swanky": "All-in-one tool for WASM smart contract developers",
       "button": "Learn more about our products"
     },
@@ -49,7 +49,7 @@
     }
   },
   "products":{
-    "astar":"Astar Network supports the building of dApps with EVM and WASM smart contracts and offers developers true interoperability with cross-consensus messaging (XCM). Astar’s unique Build2Earn model empowers developers to get paid through a dApp staking mechanism for their code and the dApps they build.",
+    "astar":"Astar is Japan's most popular smart contract platform supporting both EVM and WebAssembly (Wasm) environments, and interoperability between them using a Cross-Virtual Machine. Astar Network is friendly to all kinds of developers, and the tools and languages they already know. Backed by the shared security of Polkadot, Astar shines brilliantly on its own within a vibrant and healthy ecosystem, and in the blockchain industry overall driving international corporate adoption, and consumer interest in Web3 technologies. \n\nAstar's Build2Earn program is designed to grow the network in an innovative way, while simultaneously rewarding participants and builders. It allows developers to earn incentives for building and maintaining their decentralized applications, and users to earn incentives for supporting their favorite projects, all while encouraging growth of the ecosystem overall.",
     "swanky":"Swanky Suite aims to be a \"all-in-one\" tool for WebAssembly smart contract developers that allows to make next generation dApps."
   },
   "solutions":{
