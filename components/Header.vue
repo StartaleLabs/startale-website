@@ -56,6 +56,16 @@
           {{ $t("meta.about.title") }}
         </NuxtLink>
         <NuxtLink
+          :to="localePath('/blog')"
+          class="border-b-2 py-2"
+          :class="`${locale !== 'ja' ? 'text-xl' : 'text-base'} ${
+            route.href === '/blog' ? 'border-black' : 'border-transparent'
+          }`"
+          @click="mobileMenuOpen = false"
+        >
+          {{ $t("meta.blog.title") }}
+        </NuxtLink>
+        <NuxtLink
           v-for="locale in availableLocales"
           :key="locale.code"
           :to="switchLocalePath(locale.code)"
@@ -109,6 +119,13 @@
               @click="mobileMenuOpen = false"
             >
               {{ $t("meta.about.title") }}
+            </NuxtLink>
+            <NuxtLink
+              :to="localePath('/blog')"
+              class="block py-6"
+              @click="mobileMenuOpen = false"
+            >
+              {{ $t("meta.blog.title") }}
             </NuxtLink>
             <NuxtLink
               v-for="locale in availableLocales"
