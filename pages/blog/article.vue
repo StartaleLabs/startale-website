@@ -60,7 +60,7 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
       <h2 class="text-center text-5xl font-semibold mb-12">Related Posts</h2>
-      <ul class="grid grid-cols-3 gap-12">
+      <ul>
         <BlogArticleCard />
         <BlogArticleCard />
         <BlogArticleCard />
