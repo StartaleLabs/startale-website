@@ -6,7 +6,19 @@ export default defineNuxtConfig({
       script: [{ src: "./nextparticle.js" }],
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "nuxt-simple-sitemap"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/i18n",
+    "nuxt-simple-sitemap",
+    "@nuxtjs/apollo",
+  ],
+  apollo: {
+    clients: {
+      subsocial: {
+        httpEndpoint: "https://squid.subsquid.io/subsocial/graphql",
+      },
+    },
+  },
   i18n: {
     baseUrl: "https://startale.org",
     locales: [

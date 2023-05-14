@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteName":"Startale Labs",
+    "siteName": "Startale Labs",
     "tagline": "Web3 for Billions",
     "description": "Startale Labs is a company that makes web3 infrastructure and public goods",
     "products": {
@@ -15,8 +15,8 @@
       "title": "About Us",
       "description": "Startale Labs is creating the missing piece for the web3's mass adoption"
     },
-    "blog":{
-      "title":"Blog",
+    "blog": {
+      "title": "Blog",
       "description": "The latest posts about all things Startale Labs."
     }
   },
@@ -36,7 +36,7 @@
       }
     },
     "products": {
-      "title":"Technologies for an open, decentralised, & trust free society",
+      "title": "Technologies for an open, decentralised, & trust free society",
       "astar": "The Future of Multichain Smart Contracts",
       "swanky": "All-in-one tool for WASM smart contract developers",
       "button": "Learn more about our products"
@@ -48,38 +48,48 @@
       "button": "See our solutions"
     }
   },
-  "products":{
-    "astar":"Astar is Japan's most popular smart contract platform supporting both EVM and WebAssembly (Wasm) environments, and interoperability between them using a Cross-Virtual Machine. Astar Network is friendly to all kinds of developers, and the tools and languages they already know. Backed by the shared security of Polkadot, Astar shines brilliantly on its own within a vibrant and healthy ecosystem, and in the blockchain industry overall driving international corporate adoption, and consumer interest in Web3 technologies. \n\nAstar's Build2Earn program is designed to grow the network in an innovative way, while simultaneously rewarding participants and builders. It allows developers to earn incentives for building and maintaining their decentralized applications, and users to earn incentives for supporting their favorite projects, all while encouraging growth of the ecosystem overall.",
-    "swanky":"Swanky Suite aims to be a \"all-in-one\" tool for WebAssembly smart contract developers that allows to make next generation dApps."
+  "products": {
+    "astar": "Astar is Japan's most popular smart contract platform supporting both EVM and WebAssembly (Wasm) environments, and interoperability between them using a Cross-Virtual Machine. Astar Network is friendly to all kinds of developers, and the tools and languages they already know. Backed by the shared security of Polkadot, Astar shines brilliantly on its own within a vibrant and healthy ecosystem, and in the blockchain industry overall driving international corporate adoption, and consumer interest in Web3 technologies. \n\nAstar's Build2Earn program is designed to grow the network in an innovative way, while simultaneously rewarding participants and builders. It allows developers to earn incentives for building and maintaining their decentralized applications, and users to earn incentives for supporting their favorite projects, all while encouraging growth of the ecosystem overall.",
+    "swanky": "Swanky Suite aims to be a \"all-in-one\" tool for WebAssembly smart contract developers that allows to make next generation dApps."
   },
-  "solutions":{
-    "introduction":{
-      "title":"Advanced Architecture, \nDevelopment Tools & \nSupport",
-      "description":"The global team of exceptional developers, cryptography experts, researchers, and solution architects affiliated with Startale Labs provides optimal solutions and support to get projects off the ground. Leveraging a broad range of experience in infrastructure and application support, we offer a wide array of services."
+  "solutions": {
+    "introduction": {
+      "title": "Advanced Architecture, \nDevelopment Tools & \nSupport",
+      "description": "The global team of exceptional developers, cryptography experts, researchers, and solution architects affiliated with Startale Labs provides optimal solutions and support to get projects off the ground. Leveraging a broad range of experience in infrastructure and application support, we offer a wide array of services."
     },
-    "features":{
-      "collaborate":{
-        "title":"Collaborative Research",
-        "description":"We work with companies to implement and develop core web3 functionalities."
+    "features": {
+      "collaborate": {
+        "title": "Collaborative Research",
+        "description": "We work with companies to implement and develop core web3 functionalities."
       },
-      "advise":{
-        "title":"Advisory Services",
-        "description":"We support optimal corporate decision-making with our cutting-edge knowledge."
+      "advise": {
+        "title": "Advisory Services",
+        "description": "We support optimal corporate decision-making with our cutting-edge knowledge."
       },
-      "dev":{
-        "title":"Core web3 developments",
-        "description":"We provide comprehensive support from layer 1 blockchain development to application creation."
+      "dev": {
+        "title": "Core web3 developments",
+        "description": "We provide comprehensive support from layer 1 blockchain development to application creation."
       }
     },
-    "web3":"Startale Labs builds decentralized applications and infrastructure using next-generation blockchain technology. Built on infrastructure designed with security, scalability, governance, and interoperability in mind, Startale Labs solutions allow your project to grow strategically and adapt to the rapid pace of technology evolution, and ever-changing market demands. Regardless of integration with Astar Network, our experienced team designs and delivers custom solutions based on the requirements."
+    "web3": "Startale Labs builds decentralized applications and infrastructure using next-generation blockchain technology. Built on infrastructure designed with security, scalability, governance, and interoperability in mind, Startale Labs solutions allow your project to grow strategically and adapt to the rapid pace of technology evolution, and ever-changing market demands. Regardless of integration with Astar Network, our experienced team designs and delivers custom solutions based on the requirements."
   },
-  "about":{
-    "startale":"Startale Labs is a web3 tech company developing multi-chain applications and infrastructure in collaboration with Astar Foundation, Web3 Foundation, other projects and large companies. The company will also conduct R&D and incubation based on the experience and connections it has developed with the Astar Network.",
-    "representative":{
-      "sota":{
-        "name":"Sota Watanabe",
-        "description":"Sota Watanabe is the founder of Astar Network, Next Web Capital and CEO at Startale Labs. He is selected Forbes30 Under 30 both in Japan and Asia in 2022. Apart from that, Sota is one of the directors of Japan Blockchain Association."
+  "about": {
+    "startale": "Startale Labs is a web3 tech company developing multi-chain applications and infrastructure in collaboration with Astar Foundation, Web3 Foundation, other projects and large companies. The company will also conduct R&D and incubation based on the experience and connections it has developed with the Astar Network.",
+    "representative": {
+      "sota": {
+        "name": "Sota Watanabe",
+        "description": "Sota Watanabe is the founder of Astar Network, Next Web Capital and CEO at Startale Labs. He is selected Forbes30 Under 30 both in Japan and Asia in 2022. Apart from that, Sota is one of the directors of Japan Blockchain Association."
       }
     }
+  },
+  "blog": {
+    "title": "Startale Blog",
+    "description": "The latest posts about all things Startale Labs.",
+    "latest": "Latest Posts",
+    "tags": "Tags",
+    "tag": "Tag",
+    "related": "Related Posts",
+    "no_articles": "There are no English articles for this tag",
+    "back": "Back to Startale Blog"
   }
 }

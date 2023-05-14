@@ -8,39 +8,47 @@
       alt=""
     />
     <div class="text-center max-w-5xl pb-6 lg:pb-12 px-3">
-      <h1 class="text-4xl lg:text-8xl font-semibold !leading-[1.2] font-serif">
-        Blog
+      <p class="text-lg sm:text-2xl mb-1">{{ $t("blog.tag") }}:</p>
+      <h1 class="text-4xl lg:text-7xl font-semibold !leading-[1.2] font-serif">
+        {{ tag }}
       </h1>
     </div>
   </div>
 
   <div class="space-y-28 lg:space-y-40 pb-40">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
-      <h2 class="text-center text-5xl mb-12 font-semibold">
-        {{ $t("blog.latest") }}
-      </h2>
-      <ul>
+      <ul v-if="posts.length > 0">
         <BlogArticleCard v-for="post in posts" :post="post" />
       </ul>
+      <div v-else class="text-center">
+        <p class="mb-6">{{ $t("blog.no_articles") }}</p>
+        <NuxtLink :to="localePath('/blog')">
+          {{ $t("blog.back") }}
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import gql from "graphql-tag";
+const localePath = useLocalePath();
+
+const route = useRoute();
+const tag = route.params.tag;
 
 // The subsocial space for news: https://polkaverse.com/10802 , and Japanese: https://polkaverse.com/11315
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 const astarSpace = locale.value === "ja" ? 11132 : 10802;
+
 const query = gql`
-  query PostsBySpaceId {
-    posts(where: { space: { id_eq: "${astarSpace}" }, hidden_eq: false }, orderBy: id_DESC) {
+query PostsByTag {
+    posts(where: { space: { id_eq: "${astarSpace}" }, tagsOriginal_containsInsensitive: "${tag}", hidden_eq: false }, orderBy: id_DESC) {
       publishedDate: createdOnDay
       title
       href: canonical
       image
       slug
-      id
     }
   }
 `;
@@ -64,10 +72,8 @@ const posts = data.value.posts.map(
   }
 );
 
-const route = useRoute();
-const { t } = useI18n();
 import { meta } from "@/content/meta";
-const seoTitle = `${t("blog.title")} | ${meta.siteName} - ${t("meta.tagline")}`;
+const seoTitle = `${tag} | ${meta.siteName} - ${t("meta.tagline")}`;
 const seoDescription = t("blog.description");
 const seoUrl = `${meta.url}${route.fullPath}`;
 const seoImage = `${meta.image}blog.png`;

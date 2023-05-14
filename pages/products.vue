@@ -92,12 +92,6 @@ import {
   ChevronRightIcon,
 } from "@heroicons/vue/24/outline";
 
-definePageMeta({
-  title: "meta.products.title",
-  slug: "products",
-  description: "meta.products.description",
-});
-
 const Discord = resolveComponent("IconDiscord");
 const Github = resolveComponent("IconGithub");
 
@@ -164,4 +158,28 @@ const products = [
     },
   },
 ];
+
+const route = useRoute();
+import { meta } from "@/content/meta";
+const seoTitle = `${t("meta.products.title")} | ${meta.siteName} - ${t(
+  "meta.tagline"
+)}`;
+const seoDescription = t("meta.products.description");
+const seoUrl = `${meta.url}${route.fullPath}`;
+const seoImage = `${meta.image}common.png`;
+
+useServerSeoMeta({
+  title: () => seoTitle,
+  description: () => seoDescription,
+  ogTitle: () => seoTitle,
+  ogDescription: () => seoDescription,
+  ogImage: () => seoImage,
+  ogImageUrl: () => seoImage,
+  ogType: () => "website",
+  ogUrl: () => seoUrl,
+  twitterCard: () => "summary_large_image",
+  twitterTitle: () => seoTitle,
+  twitterDescription: () => seoDescription,
+  twitterImage: () => seoImage,
+});
 </script>
