@@ -9,8 +9,9 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
-    "nuxt-simple-sitemap",
     "@nuxtjs/apollo",
+    "nuxt-simple-sitemap",
+    "nuxt-schema-org",
   ],
   apollo: {
     clients: {
@@ -47,5 +48,8 @@ export default defineNuxtConfig({
   sitemap: {
     siteUrl: "https://startale.org",
     discoverImages: false,
+  },
+  schemaOrg: {
+    host: "https://startale.org/",
   },
 });

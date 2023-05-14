@@ -183,6 +183,14 @@ useServerSeoMeta({
   twitterDescription: () => seoDescription,
   twitterImage: () => post.image,
 });
+
+useSchemaOrg([
+  defineArticle({
+    author: {
+      name: post.author.profileSpace.name,
+    },
+  }),
+]);
 </script>
 
 <style lang="postcss">

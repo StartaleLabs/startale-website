@@ -642,6 +642,30 @@
   resolved "https://registry.npmjs.org/@nuxt/devalue/-/devalue-2.0.0.tgz"
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
+"@nuxt/kit@3.4.2":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.4.2.tgz#a7ae05f154c43560f18dd56c49df1b23a2c2553b"
+  integrity sha512-bFUpkyG2ZF6RYqiW+tXnWssccHQQqMF4kZJJLP/0eKXf+Fkt/Is0R7IY768jy8ylnyqeMBbmpg4Zv5gSZjfZQw==
+  dependencies:
+    "@nuxt/schema" "3.4.2"
+    c12 "^1.4.1"
+    consola "^3.1.0"
+    defu "^6.1.2"
+    globby "^13.1.4"
+    hash-sum "^2.0.0"
+    ignore "^5.2.4"
+    jiti "^1.18.2"
+    knitwork "^1.0.0"
+    lodash.template "^4.5.0"
+    mlly "^1.2.0"
+    pathe "^1.1.0"
+    pkg-types "^1.0.2"
+    scule "^1.0.0"
+    semver "^7.5.0"
+    unctx "^2.3.0"
+    unimport "^3.0.6"
+    untyped "^1.3.2"
+
 "@nuxt/kit@3.4.3", "@nuxt/kit@^3.1.2", "@nuxt/kit@^3.2.0", "@nuxt/kit@^3.3.1", "@nuxt/kit@^3.3.3":
   version "3.4.3"
   resolved "https://registry.npmjs.org/@nuxt/kit/-/kit-3.4.3.tgz"
@@ -679,6 +703,21 @@
     postcss-loader "^4.1.0"
     postcss-url "^10.1.1"
     semver "^7.3.4"
+
+"@nuxt/schema@3.4.2":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.4.2.tgz#1cdafdc3246027bb9964c2ccb172003213c4d989"
+  integrity sha512-DXB/fyjrAssFt9KGXyS+ZSfm1A0NYKhEoc01wyz1lGo//oETzUh3MmwE6X3x65NPqDlYZ6Mnj+IdftRRophv5Q==
+  dependencies:
+    defu "^6.1.2"
+    hookable "^5.5.3"
+    pathe "^1.1.0"
+    pkg-types "^1.0.2"
+    postcss-import-resolver "^2.0.0"
+    std-env "^3.3.2"
+    ufo "^1.1.1"
+    unimport "^3.0.6"
+    untyped "^1.3.2"
 
 "@nuxt/schema@3.4.3":
   version "3.4.3"
@@ -1002,6 +1041,11 @@
   dependencies:
     "@unhead/schema" "1.1.26"
     "@unhead/shared" "1.1.26"
+
+"@unhead/schema-org-vue@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@unhead/schema-org-vue/-/schema-org-vue-0.5.0.tgz#9a2d4a03a0991e4872fd68462a6c89fe2b3b9e9e"
+  integrity sha512-UEB54jF2+HBoHKqyqdw7oNLqdhDfEX/FSImtPT3oTDTfGBWpc7RGUPe2RG/j4N78Kk3SsfnHxxJO0GKIGPJRwQ==
 
 "@unhead/schema@1.1.26":
   version "1.1.26"
@@ -3857,6 +3901,15 @@ nuxi@3.4.3:
   integrity sha512-Flb23UkrWrTP/MmvHTpk+OLu+x2T2V9ciS8aCRsvADXTW3YIY2zGqFkqg6rKDCCeaoFn/MS1IxVgViT/FFe3QQ==
   optionalDependencies:
     fsevents "~2.3.2"
+
+nuxt-schema-org@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/nuxt-schema-org/-/nuxt-schema-org-2.1.3.tgz#dcaf518da9cdbea6ca0582eef87e10898a9bb286"
+  integrity sha512-y+KVeIONR/MR9o2sZ3WJX+/7KX9g+xWJKdZtyMhkvzN0KiLEIxnv3og6a1BUb/9eqkG8sLOb6Ui+PYpZFlwtTw==
+  dependencies:
+    "@nuxt/kit" "3.4.2"
+    "@unhead/schema-org-vue" "^0.5.0"
+    pathe "^1.1.0"
 
 nuxt-simple-sitemap@^2.5.0:
   version "2.5.0"
