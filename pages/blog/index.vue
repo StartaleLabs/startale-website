@@ -8,15 +8,17 @@
       alt=""
     />
     <div class="text-center max-w-5xl pb-6 lg:pb-12 px-3">
-      <h1 class="text-4xl lg:text-8xl font-semibold !leading-[1.2] font-serif">
-        Blog
+      <h1
+        class="text-5xl sm:text-6xl lg:text-8xl font-semibold !leading-[1.2] font-serif"
+      >
+        Startale Blog
       </h1>
     </div>
   </div>
 
   <div class="space-y-28 lg:space-y-40 pb-40">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
-      <h2 class="text-center text-5xl mb-12 font-semibold">
+      <h2 class="text-center text-4xl sm:text-5xl mb-2 sm:mb-12 font-semibold">
         {{ $t("blog.latest") }}
       </h2>
       <ul>

@@ -8,8 +8,10 @@
       alt=""
     />
     <div class="text-center max-w-5xl pb-6 lg:pb-12 px-3">
-      <p class="text-lg sm:text-2xl mb-1">{{ $t("blog.tag") }}:</p>
-      <h1 class="text-4xl lg:text-7xl font-semibold !leading-[1.2] font-serif">
+      <p class="text-lg lg:text-2xl mb-1">{{ $t("blog.tag") }}:</p>
+      <h1
+        class="text-4xl sm:text-5xl lg:text-7xl font-semibold !leading-[1.2] font-serif"
+      >
         {{ tag }}
       </h1>
     </div>

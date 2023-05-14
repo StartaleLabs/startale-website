@@ -1,5 +1,7 @@
 <template>
-  <div class="pt-32 flex items-center justify-center relative overflow-hidden">
+  <div
+    class="pt-20 sm:pt-24 lg:pt-32 flex items-center justify-center relative overflow-hidden"
+  >
     <img
       class="w-full h-auto absolute bottom-0 left-0 z-0 min-w-[1000px]"
       src="~/assets/images/home/particle-wave.svg"
@@ -17,16 +19,18 @@
   </div>
 
   <div class="space-y-28 lg:space-y-40 pb-40">
-    <article class="max-w-4xl mx-auto px-4 sm:px-6 pt-20">
-      <header class="text-center mb-16">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 sm:pt-20">
+      <header class="text-center mb-10 sm:mb-16">
         <time class="text-gray-400">{{ post.publishedDate }}</time>
-        <h1 class="text-5xl font-semibold leading-tight text-black">
+        <h1
+          class="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-black"
+        >
           {{ post.title }}
         </h1>
       </header>
       <div class="entry-content leading-9" v-html="post.body" />
       <footer class="mt-16">
-        <div class="flex mb-12">
+        <div class="flex mb-12 text-base lg:text-lg">
           <p class="mr-2 mt-1.5">{{ $t("blog.tags") }}:</p>
           <div class="flex flex-wrap">
             <NuxtLink
@@ -38,19 +42,19 @@
             </NuxtLink>
           </div>
         </div>
-        <div class="flex border border-gray-300 p-8 rounded">
+        <div class="flex border border-gray-300 p-4 lg:p-8 rounded">
           <div class="shrink-0 mr-4">
             <img
               :src="post.authorImg"
               alt=""
-              class="object-cover w-16 h-16 rounded-full"
+              class="object-cover w-12 lg:w-16 h-12 lg:h-16 rounded-full"
             />
           </div>
           <div class="flex-1">
-            <h3 class="font-bold text-xl mb-2 text-black">
+            <h3 class="font-bold text-lg lg:text-xl mb-1 text-black">
               {{ post.author.profileSpace.name }}
             </h3>
-            <p>
+            <p class="text-base lg:text-lg">
               {{ post.author.profileSpace.about }}
             </p>
           </div>
@@ -59,7 +63,7 @@
     </article>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
-      <h2 class="text-center text-5xl font-semibold mb-12">
+      <h2 class="text-center text-4xl lg:text-5xl font-semibold mb-2 lg:mb-12">
         {{ $t("blog.related") }}
       </h2>
       <ul>
@@ -195,7 +199,7 @@ useSchemaOrg([
 
 <style lang="postcss">
 .entry-content {
-  @apply prose lg:prose-xl prose-a:text-blue-500 hover:prose-a:text-blue-400 prose-headings:text-white prose-headings:font-bold prose-blockquote:font-normal prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:bg-white/5 prose-strong:font-medium;
+  @apply prose lg:prose-xl prose-a:text-blue-500 hover:prose-a:text-blue-400 prose-headings:text-white prose-headings:font-bold prose-blockquote:font-normal prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:bg-white/5 prose-strong:font-medium mx-auto;
 }
 .entry-content h2 a,
 .entry-content h3 a,
