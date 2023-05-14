@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       script: [{ src: "./nextparticle.js" }],
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "~/modules/sitemap", "@nuxtjs/i18n"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "nuxt-simple-sitemap"],
   i18n: {
     baseUrl: "https://startale.org",
     locales: [
@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     },
   },
   sitemap: {
-    hostname: "https://startale.org",
+    siteUrl: "https://startale.org",
+    discoverImages: false,
   },
 });
