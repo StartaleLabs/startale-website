@@ -81,9 +81,9 @@ const md = new MarkdownIt();
 const route = useRoute();
 const slug = route.params.slug;
 
-// The subsocial space for news: https://polkaverse.com/10802 , and Japanese: https://polkaverse.com/11315
+// The subsocial space for news: https://polkaverse.com/11215 , and Japanese: https://polkaverse.com/11408
 const { locale, t } = useI18n();
-const astarSpace = locale.value === "ja" ? 11132 : 10802;
+const astarSpace = locale.value === "ja" ? 11408 : 11215;
 const i18n = locale.value === "ja" ? "/ja" : "";
 
 const query = gql`
