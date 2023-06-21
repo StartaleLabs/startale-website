@@ -90,7 +90,7 @@ const navigation = [
       },
       {
         label: "Swanky",
-        href: "https://docs.astar.network/docs/build/wasm/swanky/",
+        href: "https://docs.astar.network/docs/build/wasm/swanky-suite/",
       },
     ],
   },
