@@ -6,7 +6,20 @@ export default defineNuxtConfig({
       script: [{ src: "./nextparticle.js" }],
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "~/modules/sitemap", "@nuxtjs/i18n"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/i18n",
+    "@nuxtjs/apollo",
+    "nuxt-simple-sitemap",
+    "nuxt-schema-org",
+  ],
+  apollo: {
+    clients: {
+      subsocial: {
+        httpEndpoint: "https://squid.subsquid.io/subsocial/graphql",
+      },
+    },
+  },
   i18n: {
     baseUrl: "https://startale.org",
     locales: [
@@ -33,6 +46,10 @@ export default defineNuxtConfig({
     },
   },
   sitemap: {
-    hostname: "https://startale.org",
+    siteUrl: "https://startale.org",
+    discoverImages: false,
+  },
+  schemaOrg: {
+    host: "https://startale.org/",
   },
 });

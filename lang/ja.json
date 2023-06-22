@@ -17,7 +17,7 @@
     },
     "blog":{
       "title":"ブログ",
-      "description": ""
+      "description": "Startale Labsの最新情報"
     }
   },
   "home": {
@@ -81,5 +81,15 @@
         "description":"Startale Labs CEO。Astar Network、Next Web Capitalファウンダー。2022年にForbes誌の選出する日本とアジアの30歳以下の30人（Forbes 30 Under 30）に選出。日本ブロックチェーン協会の役員も務める。"
       }
     }
+  },
+  "blog": {
+    "title": "Startaleブログ",
+    "description": "Startale Labsに関する最新情報をお届けします",
+    "latest": "最新記事",
+    "tags": "タグ",
+    "tag": "タグ",
+    "related": "関連記事",
+    "no_articles": "このタグの日本語記事はありません",
+    "back": "ブログトップへ戻る"
   }
 }
