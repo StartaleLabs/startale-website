@@ -74,6 +74,8 @@
 </template>
 
 <script setup lang="ts">
+defineI18nRoute(false);
+
 import gql from "graphql-tag";
 import MarkdownIt from "markdown-it";
 const md = new MarkdownIt();
