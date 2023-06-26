@@ -199,22 +199,19 @@ useSchemaOrg([
 
 <style lang="postcss">
 .entry-content {
-  @apply prose lg:prose-xl prose-a:text-blue-500 hover:prose-a:text-blue-400 prose-headings:text-white prose-headings:font-bold prose-blockquote:font-normal prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:bg-white/5 prose-strong:font-medium mx-auto;
-}
-.entry-content h2 a,
-.entry-content h3 a,
-.entry-content h4 a {
-  @apply text-black no-underline;
+  @apply mx-auto prose lg:prose-xl prose-a:text-blue-500 hover:prose-a:text-blue-400 prose-headings:text-black prose-headings:font-serif prose-headings:font-semibold prose-blockquote:font-normal prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:bg-gray-50 prose-strong:font-bold prose-img:mx-auto;
 }
 .entry-content p code {
   font-size: 0.9em;
-  @apply bg-white/20 font-normal rounded p-2;
+  @apply bg-gray-50 font-normal rounded p-2;
 }
 .entry-content p code::before,
 .entry-content p code::after {
   @apply hidden;
 }
-/* .entry-content strong {
-  background: linear-gradient(transparent 60%, #69275c 60%);
-} */
+.entry-content h1 strong,
+.entry-content h2 strong,
+.entry-content h3 strong {
+  @apply font-semibold;
+}
 </style>
