@@ -21,9 +21,9 @@
       <h2 class="text-center text-4xl sm:text-5xl mb-2 sm:mb-12 font-semibold">
         {{ $t("blog.latest") }}
       </h2>
-      <ul>
+      <div>
         <BlogArticleCard v-for="post in posts" :post="post" />
-      </ul>
+      </div>
     </div>
   </div>
 </template>
