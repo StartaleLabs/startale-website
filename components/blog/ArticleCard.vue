@@ -1,8 +1,10 @@
 <template>
   <div class="border-b border-gray-300 py-8">
     <!-- post.slug is the slug of the article -->
-    <NuxtLink
+    <a
       :href="'/blog/' + post.slug"
+      target="“_blank”"
+      rel="noopener noreferrer"
       class="block sm:flex space-y-4 sm:space-y-0 sm:space-x-8 items-center overflow-hidden bg-space-gray group transition hover:no-underline"
     >
       <img
@@ -18,7 +20,7 @@
           {{ post.title }}
         </p>
       </div>
-    </NuxtLink>
+    </a>
   </div>
 </template>
 
