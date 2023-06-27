@@ -1,9 +1,9 @@
 <template>
-  <li class="border-b border-gray-300 py-8">
+  <div class="border-b border-gray-300 py-8">
     <!-- post.slug is the slug of the article -->
     <NuxtLink
       :href="'/blog/' + post.slug"
-      class="sm:flex space-y-4 sm:space-y-0 sm:space-x-8 items-center overflow-hidden bg-space-gray group transition hover:no-underline"
+      class="block sm:flex space-y-4 sm:space-y-0 sm:space-x-8 items-center overflow-hidden bg-space-gray group transition hover:no-underline"
     >
       <img
         :src="post.image"
@@ -19,7 +19,7 @@
         </p>
       </div>
     </NuxtLink>
-  </li>
+  </div>
 </template>
 
 <script setup lang="ts">
