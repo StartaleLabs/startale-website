@@ -39,11 +39,6 @@ export default defineNuxtConfig({
     langDir: "lang",
     defaultLocale: "en",
     strategy: "prefix_except_default",
-    vueI18n: {
-      legacy: false,
-      locale: "en",
-      fallbackLocale: "en",
-    },
   },
   sitemap: {
     siteUrl: "https://startale.org",
