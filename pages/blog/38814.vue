@@ -21,7 +21,7 @@
   <div class="space-y-28 lg:space-y-40 pb-40">
     <article class="max-w-4xl mx-auto px-4 sm:px-6 pt-10 sm:pt-20">
       <header class="text-center mb-10 sm:mb-16">
-        <time class="text-gray-400">Jun 27, 2023</time>
+        <time class="text-gray-400">Jun 28, 2023</time>
         <h1
           class="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-black"
         >

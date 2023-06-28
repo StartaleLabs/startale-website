@@ -15,7 +15,7 @@
         class="object-cover w-full sm:w-[300px] h-[200px] group-hover:brightness-110 shrink-0"
       />
       <div class="flex-1">
-        <time class="text-gray-400 text-tiny">{{ post.publishedDate }}</time>
+        <time class="text-gray-400 text-tiny">Jun 28, 2023</time>
         <p
           class="text-xl line-clamp-3 leading-7 mt-1 group-hover:text-black group-hover:underline"
         >
