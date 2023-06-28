@@ -3,8 +3,6 @@
     <!-- post.slug is the slug of the article -->
     <a
       :href="'/blog/' + post.slug"
-      target="_blank"
-      rel="noopener noreferrer"
       class="block sm:flex space-y-4 sm:space-y-0 sm:space-x-8 items-center overflow-hidden bg-space-gray group transition hover:no-underline"
     >
       <img
