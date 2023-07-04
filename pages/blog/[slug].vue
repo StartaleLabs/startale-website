@@ -62,7 +62,10 @@
       </footer>
     </article>
 
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
+    <div
+      v-if="posts.length > 0"
+      class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10"
+    >
       <h2 class="text-center text-4xl lg:text-5xl font-semibold mb-2 lg:mb-12">
         {{ $t("blog.related") }}
       </h2>
@@ -127,10 +130,16 @@ const post = data.value.posts.map(
   }
 )[0];
 
-const orConditions = post.tagsOriginal
-  .split(",")
-  .map((tag: string) => `{ tagsOriginal_containsInsensitive: "${tag}" }`)
-  .join(", ");
+let orConditions = "";
+if (post.tagsOriginal !== undefined) {
+  orConditions = post.tagsOriginal
+    .split(",")
+    .map((tag: string) => `{ tagsOriginal_containsInsensitive: "${tag}" }`)
+    .join(", ");
+}
+
+console.log("post.tagsOriginal: ", post.tagsOriginal);
+console.log("orConditions: ", orConditions);
 
 const querySpace = gql`
   query PostsByTag {
@@ -165,6 +174,8 @@ const posts = dataRelated.data.value.posts.map(
     };
   }
 );
+
+console.log("related posts", posts);
 
 import { meta } from "@/content/meta";
 const seoTitle = `${post.title} | ${meta.siteName}`;
