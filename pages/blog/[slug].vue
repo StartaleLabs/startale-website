@@ -30,7 +30,10 @@
       </header>
       <div class="entry-content leading-9" v-html="post.body" />
       <footer class="mt-16">
-        <div class="flex mb-12 text-base lg:text-lg">
+        <div
+          v-if="post.tagsOriginal !== undefined && post.tagsOriginal.length > 0"
+          class="flex mb-12 text-base lg:text-lg"
+        >
           <p class="mr-2 mt-1.5">{{ $t("blog.tags") }}:</p>
           <div class="flex flex-wrap">
             <NuxtLink
