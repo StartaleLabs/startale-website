@@ -51,6 +51,7 @@ query PostsByTag {
       href: canonical
       image
       slug
+      id
     }
   }
 `;
