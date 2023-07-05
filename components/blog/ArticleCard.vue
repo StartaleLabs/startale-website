@@ -2,7 +2,7 @@
   <div class="border-b border-gray-300 py-8">
     <!-- post.slug is the slug of the article -->
     <a
-      :href="'/blog/' + post.slug"
+      :href="'/blog/' + post.id"
       class="block sm:flex space-y-4 sm:space-y-0 sm:space-x-8 items-center overflow-hidden bg-space-gray group transition hover:no-underline"
     >
       <img

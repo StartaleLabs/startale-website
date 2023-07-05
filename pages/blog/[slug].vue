@@ -94,9 +94,10 @@ const { locale, t } = useI18n();
 const astarSpace = locale.value === "ja" ? 11408 : 11215;
 const i18n = locale.value === "ja" ? "/ja" : "";
 
+console.log("astarSpace, slug: ", astarSpace, slug);
 const query = gql`
   query PostsBySlug {
-    posts(where: { space: { id_eq: "${astarSpace}" }, slug_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC) {
+    posts(where: { space: { id_eq: "${astarSpace}" }, id_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC) {
       publishedDate: createdOnDay
       title
       href: canonical
@@ -108,6 +109,8 @@ const query = gql`
     }
   }
 `;
+
+// console.log("query: ", query);
 
 const { data } = await useAsyncQuery({ query, clientId: "subsocial" });
 const post = data.value.posts.map(
@@ -133,6 +136,8 @@ const post = data.value.posts.map(
   }
 )[0];
 
+// console.log("post: ", post);
+
 let orConditions = "";
 if (post.tagsOriginal !== undefined) {
   orConditions = post.tagsOriginal
@@ -141,12 +146,12 @@ if (post.tagsOriginal !== undefined) {
     .join(", ");
 }
 
-console.log("post.tagsOriginal: ", post.tagsOriginal);
+
 console.log("orConditions: ", orConditions);
 
 const querySpace = gql`
   query PostsByTag {
-    posts(where: { space: { id_eq: "${astarSpace}" }, AND: { OR: [${orConditions}] }, slug_not_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC) {
+    posts(where: { space: { id_eq: "${astarSpace}" }, AND: { OR: [${orConditions}] }, id_not_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC) {
       publishedDate: createdOnDay
       title
       href: canonical
