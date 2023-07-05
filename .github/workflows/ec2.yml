@@ -37,6 +37,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd ~/startale/startale-website/
+            git stash &&
             git pull &&
             npm ci &&
             npm run build &&
