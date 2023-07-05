@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   app: {
     // baseURL: "/startale-website/", // for GitHub Pages
     head: {
-      script: [{ src: "/nextparticle.js" }],
+      script: [{ src: "./nextparticle.js" }],
     },
   },
   modules: [

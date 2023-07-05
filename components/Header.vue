@@ -72,7 +72,7 @@
           class="nav-item border-l border-gray-500 pl-6 flex items-center"
         >
           <GlobeAltIcon class="w-6 h-6 stroke-1 mr-1" />
-          <span :class="locale.code !== 'ja' && 'text-xl'">
+          <span :class="locale.code === 'ja' ? 'font-ja' : 'text-xl'">
             {{ locale.name }}
           </span>
         </NuxtLink>
@@ -135,7 +135,7 @@
               @click="mobileMenuOpen = false"
             >
               <GlobeAltIcon class="w-6 h-6 stroke-1 mr-1" />
-              <span :class="locale.code === 'ja' && 'text-xl'">
+              <span :class="locale.code === 'ja' ? 'font-ja text-xl' : ''">
                 {{ locale.name }}
               </span>
             </NuxtLink>
