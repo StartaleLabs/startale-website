@@ -94,7 +94,7 @@ const { locale, t } = useI18n();
 const astarSpace = locale.value === "ja" ? 11408 : 11215;
 const i18n = locale.value === "ja" ? "/ja" : "";
 
-console.log("astarSpace, slug: ", astarSpace, slug);
+// console.log("astarSpace, slug: ", astarSpace, slug);
 
 const query = gql`
   query PostsBySlug {
