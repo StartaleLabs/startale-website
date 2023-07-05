@@ -1,0 +1,29 @@
+name: Deploy on EC2
+
+on:
+  push:
+    branches:
+      - dynamic-blog
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: SSH into EC2-2 instance
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST_2 }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            cd ~/st_ssr/startale-website/
+            git stash &&
+            git pull &&
+            npm ci &&
+            npm run build &&
+            sudo systemctl restart st-ssr.service
