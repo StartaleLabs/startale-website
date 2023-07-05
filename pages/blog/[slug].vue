@@ -80,7 +80,7 @@
 </template>
 
 <script setup lang="ts">
-defineI18nRoute(false);
+// defineI18nRoute(false);
 
 import gql from "graphql-tag";
 import MarkdownIt from "markdown-it";
@@ -98,7 +98,7 @@ console.log("astarSpace, slug: ", astarSpace, slug);
 
 const query = gql`
   query PostsBySlug {
-    posts(where: { space: { id_eq: "${astarSpace}" }, id_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC) {
+    posts(where: { space: { id_eq: "11215" }, id_eq: "${slug}", hidden_eq: false, OR: { space: { id_eq: "11408" }, id_eq: "${slug}", hidden_eq: false } }, orderBy: id_DESC) {
       publishedDate: createdOnDay
       title
       href: canonical
