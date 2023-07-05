@@ -2,9 +2,9 @@
 export default defineNuxtConfig({
   app: {
     // baseURL: "/startale-website/", // for GitHub Pages
-    head: {
-      script: [{ src: "/nextparticle.js" }],
-    },
+    // head: {
+    //   script: [{ src: "/nextparticle.js" }],
+    // },
   },
   modules: [
     "@nuxtjs/tailwindcss",
