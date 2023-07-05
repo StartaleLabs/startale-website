@@ -94,7 +94,8 @@ const { locale, t } = useI18n();
 const astarSpace = locale.value === "ja" ? 11408 : 11215;
 const i18n = locale.value === "ja" ? "/ja" : "";
 
-console.log("astarSpace, slug: ", astarSpace, slug);
+// console.log("astarSpace, slug: ", astarSpace, slug);
+
 const query = gql`
   query PostsBySlug {
     posts(where: { space: { id_eq: "${astarSpace}" }, id_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC) {
@@ -146,8 +147,7 @@ if (post.tagsOriginal !== undefined) {
     .join(", ");
 }
 
-
-console.log("orConditions: ", orConditions);
+// console.log("orConditions: ", orConditions);
 
 const querySpace = gql`
   query PostsByTag {
@@ -183,7 +183,7 @@ const posts = dataRelated.data.value.posts.map(
   }
 );
 
-console.log("related posts", posts);
+// console.log("related posts", posts);
 
 import { meta } from "@/content/meta";
 const seoTitle = `${post.title} | ${meta.siteName}`;
