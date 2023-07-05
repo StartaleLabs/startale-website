@@ -30,7 +30,10 @@
       </header>
       <div class="entry-content leading-9" v-html="post.body" />
       <footer class="mt-16">
-        <div class="flex mb-12 text-base lg:text-lg">
+        <div
+          v-if="post.tagsOriginal !== undefined && post.tagsOriginal.length > 0"
+          class="flex mb-12 text-base lg:text-lg"
+        >
           <p class="mr-2 mt-1.5">{{ $t("blog.tags") }}:</p>
           <div class="flex flex-wrap">
             <NuxtLink
@@ -62,7 +65,10 @@
       </footer>
     </article>
 
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
+    <div
+      v-if="posts.length > 0"
+      class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10"
+    >
       <h2 class="text-center text-4xl lg:text-5xl font-semibold mb-2 lg:mb-12">
         {{ $t("blog.related") }}
       </h2>
@@ -74,7 +80,7 @@
 </template>
 
 <script setup lang="ts">
-defineI18nRoute(false);
+// defineI18nRoute(false);
 
 import gql from "graphql-tag";
 import MarkdownIt from "markdown-it";
@@ -88,9 +94,11 @@ const { locale, t } = useI18n();
 const astarSpace = locale.value === "ja" ? 11408 : 11215;
 const i18n = locale.value === "ja" ? "/ja" : "";
 
+// console.log("astarSpace, slug: ", astarSpace, slug);
+
 const query = gql`
   query PostsBySlug {
-    posts(where: { space: { id_eq: "${astarSpace}" }, slug_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC) {
+    posts(where: { space: { id_eq: "11215" }, id_eq: "${slug}", hidden_eq: false, OR: { space: { id_eq: "11408" }, id_eq: "${slug}", hidden_eq: false } }, orderBy: id_DESC) {
       publishedDate: createdOnDay
       title
       href: canonical
@@ -98,10 +106,13 @@ const query = gql`
       body
       summary
       tagsOriginal
+      id
       author: ownedByAccount { profileSpace { name, image, about } }
     }
   }
 `;
+
+// console.log("query: ", query);
 
 const { data } = await useAsyncQuery({ query, clientId: "subsocial" });
 const post = data.value.posts.map(
@@ -127,19 +138,27 @@ const post = data.value.posts.map(
   }
 )[0];
 
-const orConditions = post.tagsOriginal
-  .split(",")
-  .map((tag: string) => `{ tagsOriginal_containsInsensitive: "${tag}" }`)
-  .join(", ");
+// console.log("post: ", post);
+
+let orConditions = "";
+if (post.tagsOriginal !== undefined) {
+  orConditions = post.tagsOriginal
+    .split(",")
+    .map((tag: string) => `{ tagsOriginal_containsInsensitive: "${tag}" }`)
+    .join(", ");
+}
+
+// console.log("orConditions: ", orConditions);
 
 const querySpace = gql`
   query PostsByTag {
-    posts(where: { space: { id_eq: "${astarSpace}" }, AND: { OR: [${orConditions}] }, slug_not_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC) {
+    posts(where: { space: { id_eq: "${astarSpace}" }, AND: { OR: [${orConditions}] }, id_not_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC) {
       publishedDate: createdOnDay
       title
       href: canonical
       image
       slug
+      id
     }
   }
 `;
@@ -165,6 +184,8 @@ const posts = dataRelated.data.value.posts.map(
     };
   }
 );
+
+// console.log("related posts", posts);
 
 import { meta } from "@/content/meta";
 const seoTitle = `${post.title} | ${meta.siteName}`;
