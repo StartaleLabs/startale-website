@@ -106,6 +106,7 @@ const query = gql`
       body
       summary
       tagsOriginal
+      id
       author: ownedByAccount { profileSpace { name, image, about } }
     }
   }
@@ -157,6 +158,7 @@ const querySpace = gql`
       href: canonical
       image
       slug
+      id
     }
   }
 `;
