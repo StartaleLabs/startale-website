@@ -10,7 +10,8 @@
                 <li v-for="menu in item.menu">
                   <NuxtLink
                     :to="
-                      menu.href.includes('https') || menu.href.includes('mailto')
+                      menu.href.includes('https') ||
+                      menu.href.includes('mailto')
                         ? menu.href
                         : localePath(menu.href)
                     "
@@ -18,7 +19,10 @@
                     class="inline-flex items-center"
                   >
                     {{ menu.label }}
-                    <ArrowTopRightOnSquareIcon class="w-4 h-4 ml-1" v-if="menu.href.includes('https')" />
+                    <ArrowTopRightOnSquareIcon
+                      class="w-4 h-4 ml-1"
+                      v-if="menu.href.includes('https')"
+                    />
                   </NuxtLink>
                 </li>
               </ul>
