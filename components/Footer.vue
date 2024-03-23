@@ -69,7 +69,7 @@ const navigation = [
       },
       {
         label: "Jobs",
-        href: "https://angel.co/company/astar-network",
+        href: "https://wellfound.com/company/startale-labs",
       },
       {
         label: "Privacy Policy",
