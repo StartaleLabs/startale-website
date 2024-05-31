@@ -69,7 +69,7 @@ const navigation = [
       },
       {
         label: "Jobs",
-        href: "https://wellfound.com/company/startale-labs",
+        href: "https://startale.com/en/career",
       },
       {
         label: "Privacy Policy",
