@@ -116,7 +116,7 @@ const navigation = [
 const social = [
   {
     label: "Twitter",
-    href: "https://twitter.com/startalehq",
+    href: "https://x.com/StartaleGroup",
     icon: Twitter,
   },
   // {
